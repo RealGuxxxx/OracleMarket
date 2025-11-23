@@ -1,0 +1,25 @@
+{
+  "name": "@veridion/oracle-sdk",
+  "version": "1.0.0",
+  "description": "SDK for Veridion Oracle Marketplace",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node test-provider.mjs"
+  },
+  "keywords": ["sui", "oracle", "blockchain"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@mysten/sui": "^1.45.0",
+    "bech32": "^2.0.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
+

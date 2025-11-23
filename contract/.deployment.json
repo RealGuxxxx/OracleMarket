@@ -1,0 +1,18 @@
+{
+  "packageId": "0xefbe91e972ff508f5be4fdf852c7b2946e4d999f8d06ec78d64b140afa035073",
+  "transactionDigest": "DFEVvibVBUjXwcsJjYad7QgVuK4fcm8CL3FUKpK5JeKD",
+  "deployedAt": "2025-01-24T00:00:00Z",
+  "minCollateral": "0.01",
+  "minCollateralMist": "10000000",
+  "platformFeeBps": 300,
+  "modules": [
+    "marketplace_treasury",
+    "oracle_core",
+    "oracle_marketplace"
+  ],
+  "upgradeCap": "0x9434e9c0d4c2dc4915458c9dd5021982857fe7cb6698a6eba9782161140f3528",
+  "fixes": [
+    "create_service_simple 改为 entry 函数，自动共享服务对象",
+    "修复 NonEntryFunctionInvoked 错误"
+  ]
+}

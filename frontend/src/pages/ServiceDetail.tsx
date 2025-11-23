@@ -136,7 +136,7 @@ const ServiceDetail: React.FC = () => {
       tx.setGasBudget(10000000);
 
       signAndExecuteTransaction(
-        { transaction: tx },
+        { transaction: tx as any },
         {
           onSuccess: async (result) => {
             let subscriptionId: string | undefined;

@@ -15,6 +15,7 @@ const MyServices: React.FC = () => {
   const { user, isConnected } = useApp();
   const currentAccount = useCurrentAccount();
   const suiClient = useSuiClient();
+  const toast = useToast();
   const { mutate: signAndExecute } = useSignAndExecuteTransaction({
     execute: async ({ bytes, signature }) =>
       await suiClient.executeTransactionBlock({
@@ -141,7 +142,7 @@ const MyServices: React.FC = () => {
       try {
         signAndExecute(
           {
-            transaction: tx,
+            transaction: tx as any,
           },
           {
             onSuccess: async (result) => {

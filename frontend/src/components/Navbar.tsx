@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ConnectButton, useCurrentAccount, useDisconnectWallet } from '@mysten/dapp-kit';
 import { useApp } from '../App';
 import { LogOut, Database, Layers, Box, Activity, Copy, Check } from 'lucide-react';
@@ -8,7 +8,6 @@ import { formatAddress, copyToClipboard } from '../utils/format';
 const Navbar: React.FC = () => {
   const { user, disconnectWallet, isConnected } = useApp();
   const location = useLocation();
-  const navigate = useNavigate();
   const currentAccount = useCurrentAccount();
   const { mutate: disconnect } = useDisconnectWallet();
   const [copied, setCopied] = React.useState(false);
